@@ -27,6 +27,36 @@ function collectProgress() {
   return progress;
 }
 
+function updateProgressHeadings() {
+  document.querySelectorAll("section[data-type]").forEach((section) => {
+    const title = section.querySelector("h2[data-title]");
+    if (!title) {
+      return;
+    }
+
+    const checkboxes = section.querySelectorAll("input[type='checkbox'][data-key]");
+    const checked = section.querySelectorAll("input[type='checkbox'][data-key]:checked");
+    const unobtainable = section.querySelectorAll("input[type='checkbox'][data-unobtainable='true']");
+    const checkedUnobtainable = section.querySelectorAll("input[type='checkbox'][data-unobtainable='true']:checked");
+
+    let text = `${title.dataset.title} ${checked.length}/${checkboxes.length}`;
+    if (unobtainable.length > 0) {
+      text += ` Unobtainable ${checkedUnobtainable.length}/${unobtainable.length}`;
+    }
+    title.textContent = text;
+
+    section.querySelectorAll("[data-subtype]").forEach((subtype) => {
+      const subtypeTitle = subtype.querySelector("h3[data-title]");
+      if (!subtypeTitle) {
+        return;
+      }
+      const subtypeCheckboxes = subtype.querySelectorAll("input[type='checkbox'][data-key]");
+      const checkedSubtype = subtype.querySelectorAll("input[type='checkbox'][data-key]:checked");
+      subtypeTitle.textContent = `${subtypeTitle.dataset.title} ${checkedSubtype.length}/${subtypeCheckboxes.length}`;
+    });
+  });
+}
+
 function setupTabs() {
   const buttons = document.querySelectorAll(".tab-button");
   const panels = document.querySelectorAll(".tab-panel");
@@ -55,13 +85,15 @@ function setupTabs() {
 }
 
 function setupProgressPersistence() {
-  let progress = getStoredProgress();
+  const progress = getStoredProgress();
   applyProgress(progress);
+  updateProgressHeadings();
 
   document.querySelectorAll("input[type='checkbox'][data-key]").forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
       progress[checkbox.dataset.key] = checkbox.checked;
       setStoredProgress(progress);
+      updateProgressHeadings();
     });
   });
 }
@@ -99,6 +131,7 @@ function setupExportImport() {
       }
       setStoredProgress(imported);
       applyProgress(imported);
+      updateProgressHeadings();
     } catch {
       alert("Unable to import file. Please use a valid export file.");
     } finally {
