@@ -23,56 +23,877 @@
         <button class="tab-button" role="tab" aria-selected="false" data-tab="build-mode">Build Mode</button>
       </div>
 
-      <section id="skins" class="tab-panel active" role="tabpanel">
-        <h2>Skins</h2>
-        <h3>Book 1</h3>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox" data-key="skins-book-1-placeholder-skin" />
-              Placeholder Skin
-            </label>
-          </li>
-        </ul>
+      <section id="skins" class="tab-panel active" role="tabpanel" data-type>
+        <h2 data-title="Skins">Skins</h2>
+        <div class="subtype-group" data-subtype>
+          <h3 data-title="Book 1">Book 1</h3>
+          <ul>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-piggy" />
+                <details>
+                  <summary>Piggy</summary>
+                  <p>Free.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-piggy-distorted" />
+                <details>
+                  <summary>Piggy (Distorted)</summary>
+                  <p>Reward for collecting all the pages of Piggy: Book 1 and Piggy: Book 2.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-piggy-dark-dress" />
+                <details>
+                  <summary>Piggy (Dark Dress)</summary>
+                  <p>Reward for doing a daily House skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-penny" />
+                <details>
+                  <summary>Penny</summary>
+                  <p>Free, House - Chapter 1 exclusive.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-piggy-geekout" />
+                <details>
+                  <summary>Piggy (GeekOut!)</summary>
+                  <p>Tier 6, Season 9 - Fright Night Exclusive.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-little-brother" />
+                <details>
+                  <summary>Little Brother</summary>
+                  <p>50 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-little-brother-red" />
+                <details>
+                  <summary>Little Brother (Red)</summary>
+                  <p>Reward for doing a daily House skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mother" />
+                <details>
+                  <summary>Mother</summary>
+                  <p>75 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mother-pearl" />
+                <details>
+                  <summary>Mother (Pearl)</summary>
+                  <p>125 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mother-turquoise" />
+                <details>
+                  <summary>Mother (Turquoise)</summary>
+                  <p>Reward for doing a daily Station skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-father" />
+                <details>
+                  <summary>Father</summary>
+                  <p>100 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-father-orange" />
+                <details>
+                  <summary>Father (Orange)</summary>
+                  <p>Reward for doing a daily Gallery skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-grandmother" />
+                <details>
+                  <summary>Grandmother</summary>
+                  <p>125 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-grandmother-blue" />
+                <details>
+                  <summary>Grandmother (Blue)</summary>
+                  <p>Reward for doing a daily City skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-sheepy" />
+                <details>
+                  <summary>Sheepy</summary>
+                  <p>150 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-sheepy-scientist" />
+                <details>
+                  <summary>Sheepy (Scientist)</summary>
+                  <p>215 Piggy Tokens; free during the Mr. P Plushie Campaign.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-sheepy-green" />
+                <details>
+                  <summary>Sheepy (Green)</summary>
+                  <p>Reward for doing a daily Forest skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-sheepy-twilight" data-unobtainable="true" />
+                <details>
+                  <summary>Sheepy (Twilight)</summary>
+                  <p>Tier 7, Season 8 - The Decaying Exclusive (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-pandy" />
+                <details>
+                  <summary>Pandy</summary>
+                  <p>160 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-teacher" />
+                <details>
+                  <summary>Teacher</summary>
+                  <p>175 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-teacher-alternate" data-unobtainable="true" />
+                <details>
+                  <summary>Teacher (Alternate)</summary>
+                  <p>Tier 5, Season 8 - The Decaying Exclusive (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-teacher-brown" />
+                <details>
+                  <summary>Teacher (Brown)</summary>
+                  <p>Reward for doing a daily School skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-memory" />
+                <details>
+                  <summary>Memory</summary>
+                  <p>200 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-memory-inverted" />
+                <details>
+                  <summary>Memory (Inverted)</summary>
+                  <p>Reward for doing a daily Gallery skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-memory-glitchy" />
+                <details>
+                  <summary>Memory (Glitchy)</summary>
+                  <p>Reward for doing a daily Alleys skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-kitty" />
+                <details>
+                  <summary>Kitty</summary>
+                  <p>225 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-kitty-white" />
+                <details>
+                  <summary>Kitty (White)</summary>
+                  <p>Reward for doing a daily Forest skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-kitty-chef" data-unobtainable="true" />
+                <details>
+                  <summary>Kitty (Chef)</summary>
+                  <p>Twentieth Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mimi" />
+                <details>
+                  <summary>Mimi</summary>
+                  <p>235 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mimi-blue" />
+                <details>
+                  <summary>Mimi (Blue)</summary>
+                  <p>Reward for doing a daily Docks skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-dinopiggy" />
+                <details>
+                  <summary>Dinopiggy</summary>
+                  <p>240 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-dinopiggy-red" />
+                <details>
+                  <summary>Dinopiggy (Red)</summary>
+                  <p>Reward for doing a daily Mall skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-dinopiggy-plushie" data-unobtainable="true" />
+                <details>
+                  <summary>Dinopiggy (Plushie)</summary>
+                  <p>Eleventh Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-daisy" />
+                <details>
+                  <summary>Daisy</summary>
+                  <p>245 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-daisy-military" />
+                <details>
+                  <summary>Daisy (Military)</summary>
+                  <p>Reward for doing a daily Camp skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-daisy-fashionista" data-unobtainable="true" />
+                <details>
+                  <summary>Daisy (Fashionista)</summary>
+                  <p>First Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-angel" />
+                <details>
+                  <summary>Angel</summary>
+                  <p>250 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-angel-whiteout-queen" data-unobtainable="true" />
+                <details>
+                  <summary>Angel (Whiteout Queen)</summary>
+                  <p>Ninth Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-pony" />
+                <details>
+                  <summary>Pony</summary>
+                  <p>260 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-pony-costume" />
+                <details>
+                  <summary>Pony (Costume)</summary>
+                  <p>Reward for doing a daily Lab skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-devil" />
+                <details>
+                  <summary>Devil</summary>
+                  <p>270 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-devil-frostbite-matriarch" data-unobtainable="true" />
+                <details>
+                  <summary>Devil (Frostbite Matriarch)</summary>
+                  <p>Twenty-ninth Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-doggy" />
+                <details>
+                  <summary>Doggy</summary>
+                  <p>275 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-doggy-green" />
+                <details>
+                  <summary>Doggy (Green)</summary>
+                  <p>Reward for doing a daily Station skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-giraffy" />
+                <details>
+                  <summary>Giraffy</summary>
+                  <p>285 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-giraffy-grey" />
+                <details>
+                  <summary>Giraffy (Grey)</summary>
+                  <p>Reward for doing a daily Factory skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-beary" />
+                <details>
+                  <summary>Beary</summary>
+                  <p>290 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-beary-green" />
+                <details>
+                  <summary>Beary (Green)</summary>
+                  <p>Reward for doing a daily Hospital skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-foxy" />
+                <details>
+                  <summary>Foxy</summary>
+                  <p>300 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-foxy-blue" />
+                <details>
+                  <summary>Foxy (Blue)</summary>
+                  <p>Reward for doing a daily Carnival skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-elly" />
+                <details>
+                  <summary>Elly</summary>
+                  <p>310 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-elly-red" />
+                <details>
+                  <summary>Elly (Red)</summary>
+                  <p>Reward for doing a daily City skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-soldier" />
+                <details>
+                  <summary>Soldier</summary>
+                  <p>315 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-soldier-black" />
+                <details>
+                  <summary>Soldier (Black)</summary>
+                  <p>Reward for doing a daily Outpost skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-zompiggy" />
+                <details>
+                  <summary>Zompiggy</summary>
+                  <p>325 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-zompiggy-inverted" />
+                <details>
+                  <summary>Zompiggy (Inverted)</summary>
+                  <p>Reward for doing a daily Metro skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-badgy" />
+                <details>
+                  <summary>Badgy</summary>
+                  <p>335 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-badgy-alternate" data-unobtainable="true" />
+                <details>
+                  <summary>Badgy (Alternate)</summary>
+                  <p>300 Vials + Level 6, Season 1 - Mr. P's Lab Exclusive (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-badgy-blue" />
+                <details>
+                  <summary>Badgy (Blue)</summary>
+                  <p>Reward for doing a daily Plant skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-bunny" />
+                <details>
+                  <summary>Bunny</summary>
+                  <p>350 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-bunny-purple" />
+                <details>
+                  <summary>Bunny (Purple)</summary>
+                  <p>Reward for doing a daily School skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-bunny-alternate" data-unobtainable="true" />
+                <details>
+                  <summary>Bunny (Alternate)</summary>
+                  <p>750 Gifts + Level 10, Season 6 - Whistling Winter Exclusive (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-bunny-twilight" data-unobtainable="true" />
+                <details>
+                  <summary>Bunny (Twilight)</summary>
+                  <p>Tier 8, Season 8 - The Decaying Exclusive (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-bunny-geekout" />
+                <details>
+                  <summary>Bunny (GeekOut!)</summary>
+                  <p>Tier 6, Season 9 - Fright Night Exclusive.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-skelly" />
+                <details>
+                  <summary>Skelly</summary>
+                  <p>375 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-skelly-white" />
+                <details>
+                  <summary>Skelly (White)</summary>
+                  <p>Reward for doing a daily Hospital skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-clowny" />
+                <details>
+                  <summary>Clowny</summary>
+                  <p>385 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-clowny-female" />
+                <details>
+                  <summary>Clowny (Female)</summary>
+                  <p>Reward for doing a daily Carnival skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-clowny-classic" data-unobtainable="true" />
+                <details>
+                  <summary>Clowny (Classic)</summary>
+                  <p>225 Campaign Coins (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-tigry" />
+                <details>
+                  <summary>Tigry</summary>
+                  <p>400 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-tigry-blue" />
+                <details>
+                  <summary>Tigry (Blue)</summary>
+                  <p>Reward for doing a daily Metro skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mousy" />
+                <details>
+                  <summary>Mousy</summary>
+                  <p>415 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mousy-elf" data-unobtainable="true" />
+                <details>
+                  <summary>Mousy (Elf)</summary>
+                  <p>Fourth Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-parasee" />
+                <details>
+                  <summary>Parasee</summary>
+                  <p>425 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-parasee-green" />
+                <details>
+                  <summary>Parasee (Green)</summary>
+                  <p>Reward for doing a daily Plant skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-zizzy" />
+                <details>
+                  <summary>Zizzy</summary>
+                  <p>450 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-zizzy-soldier" data-unobtainable="true" />
+                <details>
+                  <summary>Zizzy (Soldier)</summary>
+                  <p>750 Gifts + Level 10, Season 3 - Holiday Hustle Exclusive (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-zizzy-pink" />
+                <details>
+                  <summary>Zizzy (Pink)</summary>
+                  <p>Reward for doing a daily Safe Place skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-ghosty" />
+                <details>
+                  <summary>Ghosty</summary>
+                  <p>460 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-ghosty-pirate" />
+                <details>
+                  <summary>Ghosty (Pirate)</summary>
+                  <p>Twenty-sixth Advent Calendar reward.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-robby" />
+                <details>
+                  <summary>Robby</summary>
+                  <p>475 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-robby-white" />
+                <details>
+                  <summary>Robby (White)</summary>
+                  <p>Reward for doing a daily Mall skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-robby-toy" data-unobtainable="true" />
+                <details>
+                  <summary>Robby (Toy)</summary>
+                  <p>Fifth Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-billy" />
+                <details>
+                  <summary>Billy</summary>
+                  <p>500 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-billy-winter-bison" data-unobtainable="true" />
+                <details>
+                  <summary>Billy (Winter Bison)</summary>
+                  <p>Twelfth Advent Calendar reward (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-torcher" />
+                <details>
+                  <summary>Torcher</summary>
+                  <p>550 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-torcher-white" />
+                <details>
+                  <summary>Torcher (White)</summary>
+                  <p>Reward for doing a daily Outpost skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-budgey" />
+                <details>
+                  <summary>Budgey</summary>
+                  <p>525 Piggy Tokens.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-budgey-blue" />
+                <details>
+                  <summary>Budgey (Blue)</summary>
+                  <p>Reward for doing a daily Port skin quest.</p>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mr-p" />
+                <details>
+                  <summary>Mr. P</summary>
+                  <p>Free, Plant: True Ending Exclusive.</p>
+                </details>
+              </div>
+            </li>
+            <li class="unobtainable">
+              <div class="collectible-row">
+                <input type="checkbox" data-key="skins-book-1-mr-p-farmer" data-unobtainable="true" />
+                <details>
+                  <summary>Mr. P (Farmer)</summary>
+                  <p>550 Campaign Coins (Unobtainable).</p>
+                </details>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section id="items" class="tab-panel" role="tabpanel" hidden>
-        <h2>Items</h2>
-        <h3>Placeholder Subtype</h3>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox" data-key="items-placeholder-subtype-placeholder-item" />
-              Placeholder Item
-            </label>
-          </li>
-        </ul>
+      <section id="items" class="tab-panel" role="tabpanel" hidden data-type>
+        <h2 data-title="Items">Items</h2>
+        <div class="subtype-group" data-subtype>
+          <h3 data-title="Placeholder Subtype">Placeholder Subtype</h3>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" data-key="items-placeholder-subtype-placeholder-item" />
+                Placeholder Item
+              </label>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section id="effects" class="tab-panel" role="tabpanel" hidden>
-        <h2>Effects</h2>
-        <h3>Placeholder Subtype</h3>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox" data-key="effects-placeholder-subtype-placeholder-effect" />
-              Placeholder Effect
-            </label>
-          </li>
-        </ul>
+      <section id="effects" class="tab-panel" role="tabpanel" hidden data-type>
+        <h2 data-title="Effects">Effects</h2>
+        <div class="subtype-group" data-subtype>
+          <h3 data-title="Placeholder Subtype">Placeholder Subtype</h3>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" data-key="effects-placeholder-subtype-placeholder-effect" />
+                Placeholder Effect
+              </label>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section id="build-mode" class="tab-panel" role="tabpanel" hidden>
-        <h2>Build Mode</h2>
-        <h3>Placeholder Subtype</h3>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox" data-key="build-mode-placeholder-subtype-placeholder-item" />
-              Placeholder Build Mode Item
-            </label>
-          </li>
-        </ul>
+      <section id="build-mode" class="tab-panel" role="tabpanel" hidden data-type>
+        <h2 data-title="Build Mode">Build Mode</h2>
+        <div class="subtype-group" data-subtype>
+          <h3 data-title="Placeholder Subtype">Placeholder Subtype</h3>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" data-key="build-mode-placeholder-subtype-placeholder-item" />
+                Placeholder Build Mode Item
+              </label>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 

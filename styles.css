@@ -56,3 +56,27 @@ body {
 ul {
   padding-left: 1.25rem;
 }
+
+.collectible-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+}
+
+.collectible-row details {
+  flex: 1;
+}
+
+.collectible-row summary {
+  cursor: pointer;
+}
+
+.collectible-row p {
+  margin: 0.35rem 0 0;
+}
+
+li.unobtainable .collectible-row {
+  background: rgba(255, 120, 120, 0.25);
+}
