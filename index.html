@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPiggy Checklist</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>RPiggy Checklist</h1>
+
+      <div class="controls">
+        <button id="export-button" type="button">Export Progress</button>
+        <label class="import-label" for="import-input">Import Progress</label>
+        <input id="import-input" type="file" accept="application/json" />
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Collectible categories">
+        <button class="tab-button active" role="tab" aria-selected="true" data-tab="skins">Skins</button>
+        <button class="tab-button" role="tab" aria-selected="false" data-tab="items">Items</button>
+        <button class="tab-button" role="tab" aria-selected="false" data-tab="effects">Effects</button>
+        <button class="tab-button" role="tab" aria-selected="false" data-tab="build-mode">Build Mode</button>
+      </div>
+
+      <section id="skins" class="tab-panel active" role="tabpanel">
+        <h2>Skins</h2>
+        <h3>Book 1</h3>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" data-key="skins-book-1-placeholder-skin" />
+              Placeholder Skin
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section id="items" class="tab-panel" role="tabpanel" hidden>
+        <h2>Items</h2>
+        <h3>Placeholder Subtype</h3>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" data-key="items-placeholder-subtype-placeholder-item" />
+              Placeholder Item
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section id="effects" class="tab-panel" role="tabpanel" hidden>
+        <h2>Effects</h2>
+        <h3>Placeholder Subtype</h3>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" data-key="effects-placeholder-subtype-placeholder-effect" />
+              Placeholder Effect
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section id="build-mode" class="tab-panel" role="tabpanel" hidden>
+        <h2>Build Mode</h2>
+        <h3>Placeholder Subtype</h3>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" data-key="build-mode-placeholder-subtype-placeholder-item" />
+              Placeholder Build Mode Item
+            </label>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
