@@ -77,6 +77,13 @@ ul {
   margin: 0.35rem 0 0;
 }
 
+.collectible-row details img {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  margin-top: 0.5rem;
+}
+
 li.unobtainable .collectible-row {
   background: rgba(255, 120, 120, 0.25);
 }
