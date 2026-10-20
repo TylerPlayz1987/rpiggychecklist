@@ -1,6 +1,17 @@
 const STORAGE_KEY = "rpiggy-checklist-progress";
 const THEME_STORAGE_KEY = "rpiggy-checklist-theme";
 
+function renderCategoryContent() {
+  ["skins", "items", "effects", "build-mode"].forEach((categoryId) => {
+    const section = document.getElementById(categoryId);
+    const markup = window.categoryContent?.[categoryId];
+    if (!section || !markup) {
+      throw new Error(`Missing content for category: ${categoryId}`);
+    }
+    section.outerHTML = markup;
+  });
+}
+
 function getStoredProgress() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
@@ -219,6 +230,23 @@ function setupThemeToggle() {
   });
 }
 
+function setupUpdateLog() {
+  const dialog = document.getElementById("update-log-dialog");
+  const openButton = document.getElementById("update-log-button");
+  const closeButton = document.getElementById("close-update-log");
+  if (!dialog || !openButton || !closeButton) {
+    return;
+  }
+
+  openButton.addEventListener("click", () => dialog.showModal());
+  closeButton.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+}
+
 function setupProgressPersistence() {
   const progress = getStoredProgress();
   applyProgress(progress);
@@ -275,7 +303,9 @@ function setupExportImport() {
   });
 }
 
+renderCategoryContent();
 setupThemeToggle();
+setupUpdateLog();
 setupTabs();
 setupSubtypeTabs();
 setupProgressPersistence();
