@@ -4,13 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RPiggy Checklist</title>
+  <title>Piggy Collectibles Checklist</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <main class="app">
-    <h1>RPiggy Checklist</h1>
+    <div class="app-header">
+      <h1>Piggy Collectibles Checklist</h1>
+      <div class="total-progress-block">
+        <div class="total-progress" aria-label="Total collectibles progress">
+          <span class="total-progress-label">Total Collectibles</span>
+          <progress id="total-progress-bar" value="0" max="1"></progress>
+          <span id="total-progress-count">0/0</span>
+        </div>
+        <div class="legend" aria-label="Highlight legend">
+          <span class="legend-title">Legend:</span>
+          <span class="legend-item"><span class="legend-swatch legend-swatch-green"></span>Becoming unobtainable</span>
+          <span class="legend-item"><span class="legend-swatch legend-swatch-red"></span>Unobtainable</span>
+        </div>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
 
     <div class="controls">
       <button id="export-button" type="button">Export Progress</button>
@@ -70,12 +85,12 @@
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-book-1-piggy-geekout" />
+              <input type="checkbox" data-key="skins-book-1-piggy-geekout" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Piggy (GeekOut!)</summary>
-                <p>Tier 6, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 6, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-book-1-piggy-geekout">Loading countdown...</span></p>
                 <img src="images/skins/book1/Piggy (GeekOut!).png" alt="Piggy (GeekOut!) skin" />
               </details>
             </div>
@@ -660,12 +675,12 @@
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-book-1-bunny-geekout" />
+              <input type="checkbox" data-key="skins-book-1-bunny-geekout" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Bunny (GeekOut!)</summary>
-                <p>Tier 6, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 6, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-book-1-bunny-geekout">Loading countdown...</span></p>
                 <img src="images/skins/book1/Bunny (GeekOut!).png" alt="Bunny (GeekOut!) skin" />
               </details>
             </div>
@@ -810,22 +825,22 @@
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-book-1-zizzy-shinobi" />
+              <input type="checkbox" data-key="skins-book-1-zizzy-shinobi" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Zizzy (Shinobi)</summary>
-                <p>Tier 16, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 16, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-book-1-zizzy-shinobi">Loading countdown...</span></p>
                 <img src="images/skins/book1/Zizzy (Shinobi).png" alt="Zizzy (Shinobi) skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-book-1-zizzy-samurai" />
+              <input type="checkbox" data-key="skins-book-1-zizzy-samurai" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Zizzy (Samurai)</summary>
-                <p>Tier 16, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 16, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-book-1-zizzy-samurai">Loading countdown...</span></p>
                 <img src="images/skins/book1/Zizzy (Samurai).png" alt="Zizzy (Samurai) skin" />
               </details>
             </div>
@@ -1548,6 +1563,7 @@
               <details>
                 <summary>Pumpiggy</summary>
                 <p>300 Piggy Tokens.</p>
+                <img src="images/skins/extra/Pumpiggy.png" alt="Pumpiggy skin" />
               </details>
             </div>
           </li>
@@ -1557,6 +1573,7 @@
               <details>
                 <summary>Pumpiggy (Snowy)</summary>
                 <p>Second Advent Calendar reward (Unobtainable).</p>
+                <img src="images/skins/extra/Pumpiggy (Snowy).png" alt="Pumpiggy (Snowy) skin" />
               </details>
             </div>
           </li>
@@ -1566,6 +1583,7 @@
               <details>
                 <summary>Reindessa</summary>
                 <p>375 Piggy Tokens.</p>
+                <img src="images/skins/extra/Reindessa.png" alt="Reindessa skin" />
               </details>
             </div>
           </li>
@@ -1575,6 +1593,7 @@
               <details>
                 <summary>Reindessa (Sweet)</summary>
                 <p>Eighth Advent Calendar reward (Unobtainable).</p>
+                <img src="images/skins/extra/Reindessa (Sweet).png" alt="Reindessa (Sweet) skin" />
               </details>
             </div>
           </li>
@@ -1584,6 +1603,7 @@
               <details>
                 <summary>Crove</summary>
                 <p>500 Piggy Tokens.</p>
+                <img src="images/skins/extra/Crove.png" alt="Crove skin" />
               </details>
             </div>
           </li>
@@ -1593,6 +1613,7 @@
               <details>
                 <summary>Crove (Alternate)</summary>
                 <p>600 Candies + Level 9, Season 2 - The Haunting Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Crove (Alternate).png" alt="Crove (Alternate) skin" />
               </details>
             </div>
           </li>
@@ -1602,6 +1623,7 @@
               <details>
                 <summary>Poley</summary>
                 <p>Free, Piggy-Jailbreak Collaboration Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Poley.png" alt="Poley skin" />
               </details>
             </div>
           </li>
@@ -1615,22 +1637,22 @@
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-mr-stitchy-fright-night" />
+              <input type="checkbox" data-key="skins-extra-mr-stitchy-fright-night" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Mr. Stitchy (Fright Night)</summary>
-                <p>Tier 20, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 20, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-mr-stitchy-fright-night">Loading countdown...</span></p>
                 <img src="images/skins/extra/MrStitchy (Fright Night).png" alt="Mr. Stitchy (Fright Night) skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-mr-stitchy-enraged" />
+              <input type="checkbox" data-key="skins-extra-mr-stitchy-enraged" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Mr. Stitchy (Enraged)</summary>
-                <p>Tier 20, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 20, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-mr-stitchy-enraged">Loading countdown...</span></p>
                 <img src="images/skins/extra/MrStitchy (Enraged).png" alt="Mr. Stitchy (Enraged) skin" />
               </details>
             </div>
@@ -1641,24 +1663,27 @@
               <details>
                 <summary>Owell</summary>
                 <p>Free, Spooky Hunt Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Owell.png" alt="Owell skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-owell-halloween" />
+              <input type="checkbox" data-key="skins-extra-owell-halloween" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Owell (Halloween)</summary>
-                <p>Tier 12, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 12, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-owell-halloween">Loading countdown...</span></p>
+                <img src="images/skins/extra/Owell (Halloween).png" alt="Owell (Halloween) skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-owell-fright-night" />
+              <input type="checkbox" data-key="skins-extra-owell-fright-night" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Owell (Fright Night)</summary>
-                <p>Tier 12, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 12, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-owell-fright-night">Loading countdown...</span></p>
+                <img src="images/skins/extra/Owell (Fright Night).png" alt="Owell (Fright Night) skin" />
               </details>
             </div>
           </li>
@@ -1668,6 +1693,7 @@
               <details>
                 <summary>Frostiggy</summary>
                 <p>Free, Winter Holiday Hunt Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Frostiggy.png" alt="Frostiggy skin" />
               </details>
             </div>
           </li>
@@ -1677,6 +1703,7 @@
               <details>
                 <summary>Frostiggy (Ice Queen)</summary>
                 <p>Twenty-seventh Advent Calendar reward (Unobtainable).</p>
+                <img src="images/skins/extra/Frostiggy (Ice Queen).png" alt="Frostiggy (Ice Queen) skin" />
               </details>
             </div>
           </li>
@@ -1686,6 +1713,7 @@
               <details>
                 <summary>Primrose</summary>
                 <p>Free, Winter Holiday Hunt Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Primrose.png" alt="Primrose skin" />
               </details>
             </div>
           </li>
@@ -1695,6 +1723,7 @@
               <details>
                 <summary>Bess</summary>
                 <p>Free, Egg Hunt Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Bess.png" alt="Bess skin" />
               </details>
             </div>
           </li>
@@ -1704,6 +1733,7 @@
               <details>
                 <summary>Gold Piggy</summary>
                 <p>Free, Egg Hunt Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Gold Piggy.png" alt="Gold Piggy skin" />
               </details>
             </div>
           </li>
@@ -1713,6 +1743,7 @@
               <details>
                 <summary>Phenna</summary>
                 <p>Free, Temple - Chapter 10 Exclusive.</p>
+                <img src="images/skins/extra/Phenna.png" alt="Phenna skin" />
               </details>
             </div>
           </li>
@@ -1722,6 +1753,7 @@
               <details>
                 <summary>Anteo</summary>
                 <p>1,050 Vials + Level 10, Season 1 - Mr. P's Lab Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Anteo.png" alt="Anteo skin" />
               </details>
             </div>
           </li>
@@ -1731,24 +1763,27 @@
               <details>
                 <summary>Laura</summary>
                 <p>Free, Camp - Chapter 11 Exclusive.</p>
+                <img src="images/skins/extra/Laura.png" alt="Laura skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-laura-halloween" />
+              <input type="checkbox" data-key="skins-extra-laura-halloween" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Laura (Halloween)</summary>
-                <p>Tier 15, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 15, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-laura-halloween">Loading countdown...</span></p>
+                <img src="images/skins/extra/Laura (Halloween).png" alt="Laura (Halloween) skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-laura-fright-night" />
+              <input type="checkbox" data-key="skins-extra-laura-fright-night" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Laura (Fright Night)</summary>
-                <p>Tier 15, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 15, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-laura-fright-night">Loading countdown...</span></p>
+                <img src="images/skins/extra/Laura (Fright Night).png" alt="Laura (Fright Night) skin" />
               </details>
             </div>
           </li>
@@ -1758,6 +1793,7 @@
               <details>
                 <summary>Bakari</summary>
                 <p>1,050 Candies + Level 11, Season 2 - The Haunting Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Bakari.png" alt="Bakari skin" />
               </details>
             </div>
           </li>
@@ -1767,6 +1803,7 @@
               <details>
                 <summary>Sentinel</summary>
                 <p>Collect all Book 1 pages.</p>
+                <img src="images/skins/extra/Sentinel.gif" alt="Sentinel skin" />
               </details>
             </div>
           </li>
@@ -1776,6 +1813,7 @@
               <details>
                 <summary>Mr. Bliss</summary>
                 <p>1,050 Gifts + Level 11, Season 3 - Holiday Hustle Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Mr. Bliss.png" alt="Mr. Bliss skin" />
               </details>
             </div>
           </li>
@@ -1785,6 +1823,7 @@
               <details>
                 <summary>Gryffyn</summary>
                 <p>1,050 Relics + Level 11, Season 4 - Expectant Exploration Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Gryffyn.png" alt="Gryffyn skin" />
               </details>
             </div>
           </li>
@@ -1794,6 +1833,7 @@
               <details>
                 <summary>Ombra</summary>
                 <p>Free, Breakout Exclusive.</p>
+                <img src="images/skins/extra/Ombra.png" alt="Ombra skin" />
               </details>
             </div>
           </li>
@@ -1803,6 +1843,7 @@
               <details>
                 <summary>Fergus</summary>
                 <p>500 Piggy Tokens.</p>
+                <img src="images/skins/extra/Fergus.png" alt="Fergus skin" />
               </details>
             </div>
           </li>
@@ -1812,6 +1853,7 @@
               <details>
                 <summary>Shardantus</summary>
                 <p>500 Piggy Tokens.</p>
+                <img src="images/skins/extra/Shardantus.png" alt="Shardantus skin" />
               </details>
             </div>
           </li>
@@ -1821,6 +1863,7 @@
               <details>
                 <summary>Marley Russell</summary>
                 <p>500 Piggy Tokens.</p>
+                <img src="images/skins/extra/Marley Russell.png" alt="Marley Russell skin" />
               </details>
             </div>
           </li>
@@ -1830,6 +1873,7 @@
               <details>
                 <summary>Glenn</summary>
                 <p>500 Piggy Tokens.</p>
+                <img src="images/skins/extra/Glenn.png" alt="Glenn skin" />
               </details>
             </div>
           </li>
@@ -1839,6 +1883,7 @@
               <details>
                 <summary>Jakayla</summary>
                 <p>500 Piggy Tokens.</p>
+                <img src="images/skins/extra/Jakayla.png" alt="Jakayla skin" />
               </details>
             </div>
           </li>
@@ -1848,6 +1893,7 @@
               <details>
                 <summary>Carver</summary>
                 <p>1,000 Candies + Level 11, Season 5 - Witching Hour Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Carver.png" alt="Carver skin" />
               </details>
             </div>
           </li>
@@ -1857,6 +1903,7 @@
               <details>
                 <summary>Sparky</summary>
                 <p>1,000 Piggy Tokens.</p>
+                <img src="images/skins/extra/Sparky.png" alt="Sparky skin" />
               </details>
             </div>
           </li>
@@ -1866,6 +1913,7 @@
               <details>
                 <summary>Duocara</summary>
                 <p>Free, Mansion Exclusive.</p>
+                <img src="images/skins/extra/Duocara.png" alt="Duocara skin" />
               </details>
             </div>
           </li>
@@ -1875,6 +1923,7 @@
               <details>
                 <summary>Duocara (Mayor)</summary>
                 <p>Tier 11, Season 7 - A Paranormal Pigmas Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Duocara (Mayor).png" alt="Duocara (Mayor) skin" />
               </details>
             </div>
           </li>
@@ -1884,6 +1933,7 @@
               <details>
                 <summary>Bela</summary>
                 <p>Free, Bela’s Hunt Exclusive.</p>
+                <img src="images/skins/extra/Bela.png" alt="Bela skin" />
               </details>
             </div>
           </li>
@@ -1893,6 +1943,7 @@
               <details>
                 <summary>Meisery</summary>
                 <p>1,000 Gifts+ Level 11, Season 6 - Whistling Winter Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Meisery.png" alt="Meisery skin" />
               </details>
             </div>
           </li>
@@ -1902,6 +1953,7 @@
               <details>
                 <summary>Eelektra</summary>
                 <p>Free, Metallica x Piggy Event Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Eelektra.png" alt="Eelektra skin" />
               </details>
             </div>
           </li>
@@ -1911,6 +1963,7 @@
               <details>
                 <summary>Blatt</summary>
                 <p>Free, The Hunt Exclusive.</p>
+                <img src="images/skins/extra/Blatt.png" alt="Blatt skin" />
               </details>
             </div>
           </li>
@@ -1920,6 +1973,7 @@
               <details>
                 <summary>The Prototype</summary>
                 <p>Free, Plant: Keymaster Exclusive.</p>
+                <img src="images/skins/extra/Prototype.png" alt="The Prototype skin" />
               </details>
             </div>
           </li>
@@ -1929,6 +1983,7 @@
               <details>
                 <summary>Decaying Infected</summary>
                 <p>Free, Decay Exclusive.</p>
+                <img src="images/skins/extra/Decaying Infected.png" alt="Decaying Infected skin" />
               </details>
             </div>
           </li>
@@ -1938,6 +1993,7 @@
               <details>
                 <summary>The Chained</summary>
                 <p>Free, Decay II: Delirium Exclusive.</p>
+                <img src="images/skins/extra/The Chained.png" alt="The Chained skin" />
               </details>
             </div>
           </li>
@@ -1947,6 +2003,7 @@
               <details>
                 <summary>Sam</summary>
                 <p>Free, Distorted Holiday Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Sam.png" alt="Sam skin" />
               </details>
             </div>
           </li>
@@ -1956,6 +2013,7 @@
               <details>
                 <summary>Rachna</summary>
                 <p>Tier 6, Season 7 - A Paranormal Pigmas Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Rachna.png" alt="Rachna skin" />
               </details>
             </div>
           </li>
@@ -1965,6 +2023,7 @@
               <details>
                 <summary>Krampiggy</summary>
                 <p>Tier 12, Season 7 - A Paranormal Pigmas Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Krampiggy.png" alt="Krampiggy skin" />
               </details>
             </div>
           </li>
@@ -1974,6 +2033,7 @@
               <details>
                 <summary>Mrs. P</summary>
                 <p>Free, Plant: Bittersweet Exclusive.</p>
+                <img src="images/skins/extra/MrsP.png" alt="Mrs. P skin" />
               </details>
             </div>
           </li>
@@ -1983,6 +2043,7 @@
               <details>
                 <summary>The 3 Veegiteers</summary>
                 <p>Free, MISSING! skin quest exclusive.</p>
+                <img src="images/skins/extra/The 3 Veggiteers.png" alt="The 3 Veegiteers skin" />
               </details>
             </div>
           </li>
@@ -1992,6 +2053,7 @@
               <details>
                 <summary>Hornz</summary>
                 <p>64 Million Piggy Tokens earned across the game; Unlock 64 events in-game (Unobtainable).</p>
+                <img src="images/skins/extra/Hornz.png" alt="Hornz skin" />
               </details>
             </div>
           </li>
@@ -2001,6 +2063,7 @@
               <details>
                 <summary>Vulture</summary>
                 <p>64 Million Piggy Tokens earned across the game; Survive for 64 minutes in-game (Unobtainable).</p>
+                <img src="images/skins/extra/Vulture.png" alt="Vulture skin" />
               </details>
             </div>
           </li>
@@ -2010,6 +2073,7 @@
               <details>
                 <summary>Centrell</summary>
                 <p>Free, Piggy x M3GAN Event Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Centrell.png" alt="Centrell skin" />
               </details>
             </div>
           </li>
@@ -2019,6 +2083,7 @@
               <details>
                 <summary>Nor</summary>
                 <p>Free, complete PIG 64 Part 2.</p>
+                <img src="images/skins/extra/Nor.png" alt="Nor skin" />
               </details>
             </div>
           </li>
@@ -2028,6 +2093,7 @@
               <details>
                 <summary>Boris</summary>
                 <p>Free, collect the Omega Key in PHIGHTING! (Unobtainable).</p>
+                <img src="images/skins/extra/Boris.png" alt="Boris skin" />
               </details>
             </div>
           </li>
@@ -2037,6 +2103,7 @@
               <details>
                 <summary>Percy</summary>
                 <p>Free, collect the Alpha Key in Tower Heroes (Unobtainable).</p>
+                <img src="images/skins/extra/Percy.png" alt="Percy skin" />
               </details>
             </div>
           </li>
@@ -2046,6 +2113,7 @@
               <details>
                 <summary>Sterling</summary>
                 <p>Free, collect the Beta Key in Flee the Facility (Unobtainable).</p>
+                <img src="images/skins/extra/Sterling.png" alt="Sterling skin" />
               </details>
             </div>
           </li>
@@ -2055,6 +2123,7 @@
               <details>
                 <summary>Skuld</summary>
                 <p>Tier 11, Season 8 - The Decaying Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Skuld.png" alt="Skuld skin" />
               </details>
             </div>
           </li>
@@ -2064,6 +2133,7 @@
               <details>
                 <summary>The Jawbreaker</summary>
                 <p>Tier 12, Season 8 - The Decaying Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/The Jawbreaker.png" alt="The Jawbreaker skin" />
               </details>
             </div>
           </li>
@@ -2073,6 +2143,7 @@
               <details>
                 <summary>Tomlinson</summary>
                 <p>700 Campaign Coins (Unobtainable).</p>
+                <img src="images/skins/extra/Tomlinson.png" alt="Tomlinson skin" />
               </details>
             </div>
           </li>
@@ -2081,8 +2152,8 @@
               <input type="checkbox" data-key="skins-extra-piggy-exe" />
               <details>
                 <summary>PIGGY.EXE</summary>
-                <p>Free, The PIGGY Household (SCARY) (DO NOT PLAY) Exclusive (Replaced Piggy during April Fools' 2024).
-                </p>
+                <p>Free, The PIGGY Household (SCARY) (DO NOT PLAY) Exclusive (Replaced Piggy during April Fools' 2024).</p>
+                <img src="images/skins/extra/PIGGYEXE.png" alt="PIGGY.EXE skin" />
               </details>
             </div>
           </li>
@@ -2092,6 +2163,7 @@
               <details>
                 <summary>Moopy</summary>
                 <p>Free, collect all twelve Moopy Plushies across each of the Book 1 chapters (Unobtainable).</p>
+                <img src="images/skins/extra/Moopy.png" alt="Moopy skin" />
               </details>
             </div>
           </li>
@@ -2101,24 +2173,27 @@
               <details>
                 <summary>Moopy (Alternative)</summary>
                 <p>Free, collect all twelve Moopy Plushies across each of the Book 1 chapters (Unobtainable).</p>
+                <img src="images/skins/extra/Moopy (Alternative).png" alt="Moopy (Alternative) skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-moopy-halloween" />
+              <input type="checkbox" data-key="skins-extra-moopy-halloween" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Moopy (Halloween)</summary>
-                <p>Tier 14, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 14, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-moopy-halloween">Loading countdown...</span></p>
+                <img src="images/skins/extra/Moopy (Halloween).png" alt="Moopy (Halloween) skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-moopy-fright-night" />
+              <input type="checkbox" data-key="skins-extra-moopy-fright-night" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Moopy (Fright Night)</summary>
-                <p>Tier 14, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 14, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-moopy-fright-night">Loading countdown...</span></p>
+                <img src="images/skins/extra/Moopy (Fright Night).png" alt="Moopy (Fright Night) skin" />
               </details>
             </div>
           </li>
@@ -2128,6 +2203,7 @@
               <details>
                 <summary>Gus</summary>
                 <p>Fourteenth Advent Calendar reward (Unobtainable).</p>
+                <img src="images/skins/extra/Gus.png" alt="Gus skin" />
               </details>
             </div>
           </li>
@@ -2137,6 +2213,7 @@
               <details>
                 <summary>Cornelia</summary>
                 <p>Free, Holiday Spirit Exclusive.</p>
+                <img src="images/skins/extra/Cornelia.png" alt="Cornelia skin" />
               </details>
             </div>
           </li>
@@ -2146,6 +2223,7 @@
               <details>
                 <summary>Hóng méiguī 🌹</summary>
                 <p>Free, Love Hearts Quest Exclusive (Unobtainable).</p>
+                <img src="images/skins/extra/Hóng méiguī.png" alt="Hóng méiguī 🌹 skin" />
               </details>
             </div>
           </li>
@@ -2155,6 +2233,7 @@
               <details>
                 <summary>Stalk</summary>
                 <p>1,000 Piggy Tokens.</p>
+                <img src="images/skins/extra/Stalk.png" alt="Stalk skin" />
               </details>
             </div>
           </li>
@@ -2164,6 +2243,7 @@
               <details>
                 <summary>Stalk (Spider)</summary>
                 <p>100 Piggy Tokens.</p>
+                <img src="images/skins/extra/Stalk (Spider).png" alt="Stalk (Spider) skin" />
               </details>
             </div>
           </li>
@@ -2173,6 +2253,7 @@
               <details>
                 <summary>Stalk (Monochrome)</summary>
                 <p>100 Piggy Tokens.</p>
+                <img src="images/skins/extra/Stalk (Monochrome).png" alt="Stalk (Monochrome) skin" />
               </details>
             </div>
           </li>
@@ -2182,6 +2263,7 @@
               <details>
                 <summary>Stalk (Zombie)</summary>
                 <p>100 Piggy Tokens.</p>
+                <img src="images/skins/extra/Stalk (Zombie).png" alt="Stalk (Zombie) skin" />
               </details>
             </div>
           </li>
@@ -2191,15 +2273,16 @@
               <details>
                 <summary>Stalk (Toy)</summary>
                 <p>100 Piggy Tokens.</p>
+                <img src="images/skins/extra/Stalk (Toy).png" alt="Stalk (Toy) skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="skins-extra-axey" />
+              <input type="checkbox" data-key="skins-extra-axey" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Axey</summary>
-                <p>Tier 19, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 19, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="skins-extra-axey">Loading countdown...</span></p>
                 <img src="images/skins/extra/Axey.png" alt="Axey skin" />
               </details>
             </div>
@@ -2315,6 +2398,7 @@
               <details>
                 <summary>Sprint</summary>
                 <p>Free.</p>
+                <img src="images/items/abilities/Sprint.png" alt="Sprint skin" />
               </details>
             </div>
           </li>
@@ -2324,6 +2408,7 @@
               <details>
                 <summary>Magnifying Glass</summary>
                 <p>8 Blueprints, 50 Piggy Tokens.</p>
+                <img src="images/items/abilities/Magnifying Glass.png" alt="Magnifying Glass skin" />
               </details>
             </div>
           </li>
@@ -2333,15 +2418,17 @@
               <details>
                 <summary>Scanner</summary>
                 <p>8 Blueprints, 79 Piggy Tokens.</p>
+                <img src="images/items/abilities/Scanner.png" alt="Scanner skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="items-abilities-trick-or-treat" />
+              <input type="checkbox" data-key="items-abilities-trick-or-treat" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Trick or Treat</summary>
-                <p>Tier 11, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 11, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="items-abilities-trick-or-treat">Loading countdown...</span></p>
+                <img src="images/items/abilities/Trick or Treat.png" alt="Trick or Treat skin" />
               </details>
             </div>
           </li>
@@ -2351,6 +2438,7 @@
               <details>
                 <summary>Radar</summary>
                 <p>8 Blueprints, 80 Piggy Tokens.</p>
+                <img src="images/items/abilities/Radar.png" alt="Radar skin" />
               </details>
             </div>
           </li>
@@ -2360,6 +2448,7 @@
               <details>
                 <summary>Flare</summary>
                 <p>8 Blueprints, 85 Piggy Tokens.</p>
+                <img src="images/items/abilities/Flare.png" alt="Flare skin" />
               </details>
             </div>
           </li>
@@ -2369,6 +2458,7 @@
               <details>
                 <summary>Camouflage</summary>
                 <p>8 Blueprints, 90 Piggy Tokens.</p>
+                <img src="images/items/abilities/Camouflage.png" alt="Camouflage skin" />
               </details>
             </div>
           </li>
@@ -2378,6 +2468,7 @@
               <details>
                 <summary>Decoy</summary>
                 <p>8 Blueprints, 100 Piggy Tokens.</p>
+                <img src="images/items/abilities/Decoy.png" alt="Decoy skin" />
               </details>
             </div>
           </li>
@@ -2387,6 +2478,7 @@
               <details>
                 <summary>Team Magnifying Glass</summary>
                 <p>8 Blueprints, 75 Piggy Tokens.</p>
+                <img src="images/items/abilities/Team Magnifying Glass.png" alt="Team Magnifying Glass skin" />
               </details>
             </div>
           </li>
@@ -2396,6 +2488,7 @@
               <details>
                 <summary>Warp</summary>
                 <p>8 Blueprints, 250 Piggy Tokens; free during the Mr. P Plushie Campaign.</p>
+                <img src="images/items/abilities/Warp.png" alt="Warp skin" />
               </details>
             </div>
           </li>
@@ -2405,6 +2498,7 @@
               <details>
                 <summary>Team Energy Boost</summary>
                 <p>8 Blueprints, 125 Piggy Tokens.</p>
+                <img src="images/items/abilities/Team Energy Boost.png" alt="Team Energy Boost skin" />
               </details>
             </div>
           </li>
@@ -2414,6 +2508,7 @@
               <details>
                 <summary>Crafty</summary>
                 <p>Tier 2, Season 7 - A Paranormal Pigmas Exclusive (Unobtainable).</p>
+                <img src="images/items/abilities/Crafty.png" alt="Crafty skin" />
               </details>
             </div>
           </li>
@@ -2423,6 +2518,7 @@
               <details>
                 <summary>Invest</summary>
                 <p>Free, AJ Alpaca Plushie Campaign Exclusive (Unobtainable).</p>
+                <img src="images/items/abilities/Invest.png" alt="Invest skin" />
               </details>
             </div>
           </li>
@@ -2432,6 +2528,7 @@
               <details>
                 <summary>Immunity</summary>
                 <p>Tier 10, Season 8 - The Decaying Exclusive (Unobtainable).</p>
+                <img src="images/items/abilities/Immunity.png" alt="Immunity skin" />
               </details>
             </div>
           </li>
@@ -2441,6 +2538,7 @@
               <details>
                 <summary>Disarm</summary>
                 <p>Sixth Advent Calendar reward (Unobtainable).</p>
+                <img src="images/items/abilities/Disarm.png" alt="Disarm skin" />
               </details>
             </div>
           </li>
@@ -2456,6 +2554,7 @@
               <details>
                 <summary>Default Trap</summary>
                 <p>Free.</p>
+                <img src="images/items/traps/Default Trap.png" alt="Default Trap" />
               </details>
             </div>
           </li>
@@ -2465,6 +2564,7 @@
               <details>
                 <summary>Small Trap</summary>
                 <p>75 Piggy Tokens.</p>
+                <img src="images/items/traps/Small Trap.png" alt="Small Trap" />
               </details>
             </div>
           </li>
@@ -2474,6 +2574,7 @@
               <details>
                 <summary>Big Trap</summary>
                 <p>125 Piggy Tokens.</p>
+                <img src="images/items/traps/Big Trap.png" alt="Big Trap" />
               </details>
             </div>
           </li>
@@ -2483,6 +2584,7 @@
               <details>
                 <summary>Slow Trap</summary>
                 <p>150 Piggy Tokens.</p>
+                <img src="images/items/traps/Slow Trap.png" alt="Slow Trap" />
               </details>
             </div>
           </li>
@@ -2492,6 +2594,7 @@
               <details>
                 <summary>Slow Storm Trap</summary>
                 <p>600 Gifts + Level 9, Season 3 - Holiday Hustle Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Slow Storm Trap.png" alt="Slow Storm Trap" />
               </details>
             </div>
           </li>
@@ -2501,6 +2604,7 @@
               <details>
                 <summary>Alarm Trap</summary>
                 <p>175 Piggy Tokens.</p>
+                <img src="images/items/traps/Alarm Trap.png" alt="Alarm Trap" />
               </details>
             </div>
           </li>
@@ -2508,8 +2612,9 @@
             <div class="collectible-row">
               <input type="checkbox" data-key="items-traps-alarm-trap-toy-robot" data-unobtainable="true" />
               <details>
-                <summary>Alarm Trap (Toy Robot)</summary>
+                <summary>Toy Robot Trap</summary>
                 <p>550 Gifts + Level 9, Season 6 - Whistling Winter Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Toy Robot Trap.png" alt="Toy Robot Trap" />
               </details>
             </div>
           </li>
@@ -2519,6 +2624,7 @@
               <details>
                 <summary>Egg Trap</summary>
                 <p>200 Piggy Tokens.</p>
+                <img src="images/items/traps/Egg Trap.png" alt="Egg Trap" />
               </details>
             </div>
           </li>
@@ -2526,8 +2632,9 @@
             <div class="collectible-row">
               <input type="checkbox" data-key="items-traps-egg-trap-bones" data-unobtainable="true" />
               <details>
-                <summary>Egg Trap (Bones)</summary>
+                <summary>Bones Trap</summary>
                 <p>550 Candies + Level 9, Season 5 - Witching Hour Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Bones Trap.png" alt="Bones Trap" />
               </details>
             </div>
           </li>
@@ -2537,6 +2644,7 @@
               <details>
                 <summary>Black Hole Trap</summary>
                 <p>215 Piggy Tokens.</p>
+                <img src="images/items/traps/Black Hole Trap.png" alt="Black Hole Trap" />
               </details>
             </div>
           </li>
@@ -2544,8 +2652,9 @@
             <div class="collectible-row">
               <input type="checkbox" data-key="items-traps-black-hole-trap-tornado" data-unobtainable="true" />
               <details>
-                <summary>Black Hole Trap (Tornado)</summary>
+                <summary>Tornado Trap</summary>
                 <p>550 Relics + Level 9, Season 4 - Expectant Exploration Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Tornado Trap.png" alt="Tornado Trap" />
               </details>
             </div>
           </li>
@@ -2555,6 +2664,7 @@
               <details>
                 <summary>Mouse Trap</summary>
                 <p>250 Piggy Tokens.</p>
+                <img src="images/items/traps/Mouse Trap.png" alt="Mouse Trap" />
               </details>
             </div>
           </li>
@@ -2562,8 +2672,9 @@
             <div class="collectible-row">
               <input type="checkbox" data-key="items-traps-mouse-trap-spider" data-unobtainable="true" />
               <details>
-                <summary>Mouse Trap (Spider)</summary>
+                <summary>Spider Trap</summary>
                 <p>750 Candies + Level 10, Season 2 - The Haunting Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Spider Trap.png" alt="Spider Trap" />
               </details>
             </div>
           </li>
@@ -2573,6 +2684,7 @@
               <details>
                 <summary>Teleporter Trap</summary>
                 <p>300 Piggy Tokens.</p>
+                <img src="images/items/traps/Teleporter.png" alt="Teleporter Trap" />
               </details>
             </div>
           </li>
@@ -2581,8 +2693,9 @@
               <input type="checkbox" data-key="items-traps-teleporter-trap-teleportation-chamber"
                 data-unobtainable="true" />
               <details>
-                <summary>Teleporter Trap (Teleportation Chamber)</summary>
+                <summary>Teleportation Chamber</summary>
                 <p>700 Vials + Level 9, Season 1 - Mr. P's Lab Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Teleportation Chamber.png" alt="Teleportation Chamber" />
               </details>
             </div>
           </li>
@@ -2592,6 +2705,7 @@
               <details>
                 <summary>Concoction Trap</summary>
                 <p>250 Piggy Tokens; free during the Mr. P Plushie Campaign.</p>
+                <img src="images/items/traps/Concoction Trap.png" alt="Concoction Trap" />
               </details>
             </div>
           </li>
@@ -2601,6 +2715,7 @@
               <details>
                 <summary>Slippery Trap</summary>
                 <p>Seventeenth Advent Calendar reward (Unobtainable).</p>
+                <img src="images/items/traps/Slippery Trap.png" alt="Slippery Trap" />
               </details>
             </div>
           </li>
@@ -2610,15 +2725,17 @@
               <details>
                 <summary>Tombstone Trap</summary>
                 <p>Free, Spooky Hunt Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Tombstone Trap.png" alt="Tombstone Trap" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="items-traps-coffin-trap" />
+              <input type="checkbox" data-key="items-traps-coffin-trap" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Coffin Trap</summary>
-                <p>Tier 13, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 13, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="items-traps-coffin-trap">Loading countdown...</span></p>
+                <img src="images/items/traps/Coffin Trap.png" alt="Coffin Trap" />
               </details>
             </div>
           </li>
@@ -2628,6 +2745,7 @@
               <details>
                 <summary>Snowpiggy Trap</summary>
                 <p>Free, Winter Holiday Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Snowpiggy Trap.png" alt="Snowpiggy Trap" />
               </details>
             </div>
           </li>
@@ -2635,8 +2753,9 @@
             <div class="collectible-row">
               <input type="checkbox" data-key="items-traps-snowpiggy-trap-mr-bliss" data-unobtainable="true" />
               <details>
-                <summary>Snowpiggy Trap (Mr. Bliss)</summary>
+                <summary>Mr. Bliss Trap</summary>
                 <p>Tier 8, Season 7 - A Paranormal Pigmas Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/MrBliss Trap.png" alt="Snowpiggy Trap (Mr. Bliss)" />
               </details>
             </div>
           </li>
@@ -2646,6 +2765,7 @@
               <details>
                 <summary>Inflatable Trap</summary>
                 <p>Free.</p>
+                <img src="images/items/traps/Inflatable Trap.png" alt="Inflatable Trap" />
               </details>
             </div>
           </li>
@@ -2655,6 +2775,7 @@
               <details>
                 <summary>Crawling Trap</summary>
                 <p>Free, Quest.</p>
+                <img src="images/items/traps/Crawling Trap.png" alt="Crawling Trap" />
               </details>
             </div>
           </li>
@@ -2662,8 +2783,9 @@
             <div class="collectible-row">
               <input type="checkbox" data-key="items-traps-crawling-trap-loan-shark" data-unobtainable="true" />
               <details>
-                <summary>Crawling Trap (Loan Shark)</summary>
+                <summary>Loan Shark Trap</summary>
                 <p>Free, AJ Alpaca Plushie Campaign Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Loan Shark Trap.png" alt="Crawling Trap (Loan Shark)" />
               </details>
             </div>
           </li>
@@ -2673,6 +2795,7 @@
               <details>
                 <summary>Lovestruck Trap</summary>
                 <p>Free, Love Hearts Quest Exclusive (Unobtainable).</p>
+                <img src="images/items/traps/Lovestruck Trap.png" alt="Lovestruck Trap" />
               </details>
             </div>
           </li>
@@ -2685,62 +2808,62 @@
       <div class="subtype-group" data-subtype>
         <h3 data-title="Kill Effects">Kill Effects</h3>
         <ul>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="effects-kill-effects-tombstone" />
+              <input type="checkbox" data-key="effects-kill-effects-tombstone" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Tombstone</summary>
-                <p>Tier 4, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 4, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="effects-kill-effects-tombstone">Loading countdown...</span></p>
                 <img src="images/effects/killeffects/Tombstone.png" alt="Tombstone" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="effects-kill-effects-tombstone-personalized" />
+              <input type="checkbox" data-key="effects-kill-effects-tombstone-personalized" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Tombstone (Personalized)</summary>
-                <p>Tier 4, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 4, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="effects-kill-effects-tombstone-personalized">Loading countdown...</span></p>
                 <img src="images/effects/killeffects/Tombstone (Personalized).png" alt="Tombstone (Personalized)" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="effects-kill-effects-bats" />
+              <input type="checkbox" data-key="effects-kill-effects-bats" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Bats</summary>
-                <p>Tier 10, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 10, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="effects-kill-effects-bats">Loading countdown...</span></p>
                 <img src="images/effects/killeffects/Bats.png" alt="Bats" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="effects-kill-effects-bats-purple" />
+              <input type="checkbox" data-key="effects-kill-effects-bats-purple" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Bats (Purple)</summary>
-                <p>Tier 10, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 10, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="effects-kill-effects-bats-purple">Loading countdown...</span></p>
                 <img src="images/effects/killeffects/Bats (Purple).png" alt="Bats (Purple)" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="effects-kill-effects-hungry-pumpkin" />
+              <input type="checkbox" data-key="effects-kill-effects-hungry-pumpkin" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary> Hungry Pumpkin</summary>
-                <p>Tier 18, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 18, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="effects-kill-effects-hungry-pumpkin">Loading countdown...</span></p>
                 <img src="images/effects/killeffects/Hungry Pumpkin.png" alt="Hungry Pumpkin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="effects-kill-effects-voracious-pumpkin" />
+              <input type="checkbox" data-key="effects-kill-effects-voracious-pumpkin" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Voracious Pumpkin</summary>
-                <p>Tier 18, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 18, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="effects-kill-effects-voracious-pumpkin">Loading countdown...</span></p>
                 <img src="images/effects/killeffects/Voracious Pumpkin.png" alt="Voracious Pumpkin" />
               </details>
             </div>
@@ -2751,12 +2874,12 @@
       <div class="subtype-group" data-subtype>
         <h3 data-title="Survivor Effects">Survivor Effects</h3>
         <ul>
-          <li>
+          <li class="unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="effects-survivor-effects-wisps" />
+              <input type="checkbox" data-key="effects-survivor-effects-wisps" data-unobtainable-after="2026-11-08T17:00:00Z" />
               <details>
                 <summary>Wisps</summary>
-                <p>Free, Frightful Forest Quest Exclusive.</p>
+                <p>Free, Frightful Forest Quest Exclusive. <span class="countdown" data-countdown-for="effects-survivor-effects-wisps">Loading countdown...</span></p>
                 <img src="images/effects/survivoreffects/Wisps.png" alt="Wisps" />
               </details>
             </div>
@@ -3250,22 +3373,22 @@
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="build-mode-survivor-skins-phenna" />
+              <input type="checkbox" data-key="build-mode-survivor-skins-phenna" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Phenna</summary>
-                <p>Tier 8, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 8, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="build-mode-survivor-skins-phenna">Loading countdown...</span></p>
                 <img src="images/buildmode/survivorskins/Phenna (BM).png" alt="Phenna survivor skin" />
               </details>
             </div>
           </li>
-          <li>
+          <li class="becoming-unobtainable">
             <div class="collectible-row">
-              <input type="checkbox" data-key="build-mode-survivor-skins-phenna-ice" />
+              <input type="checkbox" data-key="build-mode-survivor-skins-phenna-ice" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Phenna (Ice)</summary>
-                <p>Tier 8, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 8, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="build-mode-survivor-skins-phenna-ice">Loading countdown...</span></p>
                 <img src="images/buildmode/survivorskins/Phenna (Ice) (BM).png" alt="Phenna (Ice) survivor skin" />
               </details>
             </div>
@@ -3444,11 +3567,11 @@
               </details>
             </div>
           </li>
-          <li>
-            <div class="collectible-row"><input type="checkbox" data-key="build-mode-event-spider-web-event" />
+          <li class="becoming-unobtainable">
+            <div class="collectible-row"><input type="checkbox" data-key="build-mode-event-spider-web-event" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Spider Web Event</summary>
-                <p>Tier 9, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 9, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="build-mode-event-spider-web-event">Loading countdown...</span></p>
                 <img src="images/buildmode/events/Spider Web Event.png" alt="Spider Web Event event" />
               </details>
             </div>
@@ -3624,22 +3747,20 @@
               </details>
             </div>
           </li>
-          <li>
-            <div class="collectible-row"><input type="checkbox"
-                data-key="build-mode-decorations-fright-night-decorations" />
+          <li class="becoming-unobtainable">
+            <div class="collectible-row"><input type="checkbox" data-key="build-mode-decorations-fright-night-decorations" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Fright Night Decorations</summary>
-                <p>Tier 3, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 3, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="build-mode-decorations-fright-night-decorations">Loading countdown...</span></p>
                 <img src="images/buildmode/decorations/Fright Night Decorations.png" alt="Fright Night Decorations" />
               </details>
             </div>
           </li>
-          <li>
-            <div class="collectible-row"><input type="checkbox"
-                data-key="build-mode-decorations-frightful-carnival-decorations" />
+          <li class="becoming-unobtainable">
+            <div class="collectible-row"><input type="checkbox" data-key="build-mode-decorations-frightful-carnival-decorations" data-unobtainable-after="2026-11-01T18:00:00Z" />
               <details>
                 <summary>Frightful Carnival Decorations</summary>
-                <p>Tier 17, Season 9 - Fright Night Exclusive.</p>
+                <p>Tier 17, Season 9 - Fright Night Exclusive. <span class="countdown" data-countdown-for="build-mode-decorations-frightful-carnival-decorations">Loading countdown...</span></p>
               </details>
             </div>
           </li>
