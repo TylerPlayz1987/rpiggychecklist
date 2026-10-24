@@ -694,6 +694,16 @@ window.categoryContent['skins'] = String.raw`<section id="skins" class="tab-pane
               </details>
             </div>
           </li>
+          <li class="becoming-unobtainable">
+            <div class="collectible-row">
+              <input type="checkbox" data-key="skins-book-1-clowny-halloween" data-unobtainable-after="2026-11-09T17:00:00Z" />
+              <details>
+                <summary>Clowny (Halloween)</summary>
+                <p>Frightful Carnival Quest Exclusive. <span class="countdown" data-countdown-for="skins-book-1-clowny-halloween">Loading countdown...</span></p>
+                <img src="images/skins/book1/Clowny (Halloween).png" alt="Clowny (Halloween) skin" />
+              </details>
+            </div>
+          </li>
           <li>
             <div class="collectible-row">
               <input type="checkbox" data-key="skins-book-1-tigry" />
