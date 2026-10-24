@@ -64,6 +64,16 @@ window.categoryContent['effects'] = String.raw`<section id="effects" class="tab-
               </details>
             </div>
           </li>
+          <li class="becoming-unobtainable">
+            <div class="collectible-row">
+              <input type="checkbox" data-key="effects-kill-effects-clown-hammer" data-unobtainable-after="2026-11-09T17:00:00Z" />
+              <details>
+                <summary>Clown Hammer</summary>
+                <p>Frightful Carnival Quest Exclusive. <span class="countdown" data-countdown-for="effects-kill-effects-clown-hammer">Loading countdown...</span></p>
+                <img src="images/effects/killeffects/Clown Hammer.png" alt="Clown Hammer" />
+              </details>
+            </div>
+          </li>
         </ul>
       </div>
 
